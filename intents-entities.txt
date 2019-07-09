@@ -1,0 +1,17 @@
+==== Version Beta ====
+
+## intent: request_inform_detail_location_travel (hỏi về địa điểm du lịch)
+- loc_travel: tên địa điểm di lịch
+
+## intent: find_hotel (tìm khách sạn trong phạm vi ...)
+- num_dis_hotel: bán kính tìm kiếm khách sạn (mét)
+
+## intent: book_hotel (đặt phòng khách sạn)
+- num_people_hotel: số người đặt phòng
+- num_room: số phòng đặt
+
+## intent: find_restaurant (tìm nhà hàng trong phạm vi ...)
+- num_dis_res: bán kính tìm nhà hàng (mét)
+
+## intent: book_restaurant (đặt chỗ trong nhà hàng)
+- num_people_res: số người đặt trong nhà hàng

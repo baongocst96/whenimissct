@@ -1,0 +1,291 @@
+## intent:affirm
+- ok
+- đúng rồi bạn
+- đúng
+- yes
+- tôi đồng ý
+- ừ
+- ukm
+- ùm
+- uk
+- ừ
+- dĩ nhiên rồi
+- chắc rồi
+- oke
+- yeah
+- đồng ý
+- chuẩn
+- okie
+- tôi đồng ý
+- chắc chắn rồi
+- tất nhiên rồi
+- sure
+- okay
+- uhm
+- uh
+- đúng rồi
+- ukm đúng rồi
+- có
+- có nha
+- ukm đúng rồi
+
+## intent:book_hotel
+- tôi muốn đặt khách sạn cho [4](num_people_hotel) người
+- tôi muốn đặt khách sạn cho [2](num_people_hotel) người với [2](num_room) phòng
+- đặt khách sạn cho [3](num_people_hotel) người
+- tìm khách sạn còn phòng cho [2](num_people_hotel) người
+- cho [3](num_people_hotel) người
+- [1](num_people_hotel) người
+- [5](num_people_hotel) người
+- [2](num_room) phòng
+- [6](num_room) phòng
+- [3](num_room) phòng
+- [4](num_room) phòng
+- đặt khách sạn cho [2](num_people_hotel) người và [2](num_room) phòng
+
+## intent:book_restaurant
+- đặt nhà hàng
+- đặt bàn nhà hàng
+- tôi muốn đặt bàn nhà hàng
+- tôi muốn đặt chỗ nhà hàng cho [3](num_people_res) người
+- đặt một bàn trong nhà hàng cho [5](num_people_res) người
+- đặt chỗ cho [2](num_people_res) người
+- chỉ [1](num_people_res) người thôi
+- đặt chỗ cho [6](num_people_res) người
+- tìm một chỗ trong nhà hàng cho [7](num_people_res) người
+- cho [3](num_people_res) người
+- tìm nhà hàng cho [4](num_people_res) người
+- cho [9](num_people_res) người nha
+- [5](num_people_res) người
+- đặt một bàn trong [nhà hàng](name_location)
+- [4](num_people_res) người
+- [4](num_people_res) người
+- tôi muốn ngồi trên lầu
+- tôi muốn ngồi ở ngoài
+- tôi muốn ngồi ở trong
+
+## intent:deny
+- không
+- nó không phải ý tôi
+- không phải
+- cho tôi lựa chọn khác
+- sai rồi
+- không còn lựa chọn nào khác không?
+- có lựa chọn nào khác không
+- không cảm ơn
+- no
+- tôi rất tiếc
+- never
+- xin lỗi nhưng cái đó không phải thứ tôi cần
+- not
+- không nha
+- không nhé
+- thôi không cần đâu
+- thôi được rồi
+- không cần gì thêm
+
+## intent:direct_and_help
+- tôi có thể tìm thông tin trợ giúp ở đâu
+- thông tin trợ giúp
+- cho tôi xin số điện thoại hotline
+- địa chỉ trung tâm trợ giúp
+- số điện thoại hotline trợ giúp là số mấy
+- sđt trợ giúp
+- sđt hotline
+- tìm trung tâm trợ giúp
+- thông tin trung tâm trợ giúp
+- trung tâm trợ giúp
+
+## intent:edit_book
+- tôi muốn đổi thành [4](num_people) người
+- đổi thành [2](num_people) người nha
+- đợi chút, tôi muốn đổi thành [3](num_people) người
+- à khoan, tôi muốn đổi số điện thoại thành [012356789](phone_num)
+- đổi số điện thoại thành [013467459](phone_num)
+- đổi số điện thoại thành [090317543](phone_num)
+- tôi muốn đổi số điện thoại thành [01254382](phone_num)
+- thay đổi số người thành [5](num_people) người
+- thay đổi thành [3](num_people) người
+- tôi muốn đổi lại thành [3](num_people) người
+- à mà tôi muốn đổi thành [3](num_people) người thôi
+- à mà tôi muốn đổi thành [3](num_people) người
+- af mà tôi muốn đổi thành [3](num_people) người
+
+## intent:find_location
+- tìm [khách sạn](name_location) quanh đây
+- tìm các [khách sạn](name_location) trong phạm vi [200](num_dis) mét
+- gần đây có [khách sạn](name_location) nào không?
+- tôi muốn tìm [khách sạn](name_location)
+- tìm [khách sạn](name_location)
+- tôi đang tìm kiếm [khách sạn](name_location)
+- trong phạm vi [500](num_dis) mét có [khách sạn](name_location) nào không?
+- tìm [khách sạn](name_location) xung quanh đây
+- tìm [khách sạn](name_location) trong bán kính [300](num_dis) mét
+- [khách sạn](name_location) trong bán kính [300](num_dis) mét
+- trong bán kính [500](num_dis) có [khách sạn](name_location) nào không?
+- [khách sạn](name_location) trong phạm vi [400](num_dis) mét
+- tìm [nhà hàng](name_location)
+- tìm [nhà hàng](name_location) quanh đây
+- [nhà hàng](name_location)
+- tìm kiếm [nhà hàng](name_location) trong khu vực
+- tôi muốn tìm [nhà hàng](name_location)
+- tìm [nhà hàng](name_location) trong phạm vi [500](num_dis) mét
+- tìm [nhà hàng](name_location) trong phạm vi [200](num_dis) mét
+- [nhà hàng](name_location) gần đây
+- [nhà hàng](name_location) trong khu vực [300](num_dis) mét
+- [nhà hàng](name_location) trong phạm vi [400](num_dis) mét
+- [khách sạn](name_location) trong bán kính [700](num_dis) mét
+- các [nhà hàng](name_location) trong bán kính [1000](num_dis) mét
+- trong bán kính [2000](num_dis) mét có [nhà hàng](name_location) nào không?
+
+## intent:greet
+- good morning
+- hi again
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+- hallo
+- heeey
+- hi hi
+- hey
+- hey hey
+- hello there
+- hello
+- yo
+- hola
+- hi?
+- hey bot!
+- hello friend
+- xin chào
+- hi
+- hello
+- Chào bạn, chúc ngày mới tốt lành
+- hey
+- chào buổi sáng
+- hey hey
+- halo
+- hola
+- chào bot
+- hey bot
+- hi there
+- buổi sáng tốt lành
+- hi bot
+- hello bot
+- bot ơi!
+- bot ơi, bot à
+- bot à
+- alo alo
+- alo bot nghe rõ trả lời
+- alo bot
+- xin chào
+
+## intent:request_event
+- sự kiện
+- sự kiện trong thành phố
+- sự kiện sắp diễn ra
+- các sự kiện
+- các sự kiện sắp diễn ra trong thành phố
+- các sự kiện đang diễn ra
+- trong thành phố có gì hot
+- các sự kiện hot trong thành phố
+- các sự kiện hot
+
+## intent:request_inform_common_location_travel
+- các địa điểm du lịch ở đây
+- ở đây có các điểm du lịch nổi tiếng nào
+- các di tích văn hóa nổi tiếng tại thành phố
+- các di tích lịch sử nổi tiếng tại thành phố
+- địa điểm du lịch
+- cho tôi xem các địa điểm du lịch trong thành phố
+- nơi đây có những địa điểm du lịch nổi tiếng nào?
+- nơi đây có những điểm du lịch nào?
+- các địa điểm phải biết khi đến đây
+
+## intent:request_inform_detail_location_travel
+- thông tin về [di tích chiến thắng cổ cò](loc_travel)
+- [di tích chiến thắng cổ cò](loc_travel)
+- tôi muốn biết về [di tích chiến thắng cổ cò](loc_travel)
+- [di tích chiến thắng cổ cò](loc_travel) nằm ở đâu
+- thông tin về [chợ hoa mỹ tho](loc_travel)
+- [chợ hoa mỹ tho](loc_travel)
+- tôi muốn biết về [chợ hoa mỹ tho](loc_travel)
+- [chợ hoa mỹ tho](loc_travel) nằm ở đâu
+- thông tin về [nhà cổ cái bè](loc_travel)
+- [nhà cổ cái bè](loc_travel)
+- tôi muốn biết về [nhà cổ cái bè](loc_travel)
+- [nhà cổ cái bè](loc_travel) nằm ở đâu
+- thông tin về [nhà đốc phủ hải](loc_travel)
+- [nhà đốc phủ hải](loc_travel)
+- tôi muốn biết về [nhà đốc phủ hải](loc_travel)
+- [nhà đốc phủ hải](loc_travel) nằm ở đâu
+- thông tin về [chùa bửu lâm cổ tự](loc_travel)
+- [chùa bửu lâm cổ tự](loc_travel)
+- tôi muốn biết về [chùa bửu lâm cổ tự](loc_travel)
+- [chùa bửu lâm cổ tự](loc_travel) nằm ở đâu
+- thông tin về [chùa vĩnh tràng](loc_travel)
+- [chùa vĩnh tràng](loc_travel)
+- tôi muốn biết về [chùa vĩnh tràng](loc_travel)
+- [chùa vĩnh tràng](loc_travel) nằm ở đâu
+- thông tin về [chợ nổi cái bè](loc_travel)
+- [chợ nổi cái bè](loc_travel)
+- tôi muốn biết về [chợ nổi cái bè](loc_travel)
+- [chợ nổi cái bè](loc_travel) nằm ở đâu
+- thông tin về [đình mỹ lương](loc_travel)
+- [đình mỹ lương](loc_travel)
+- tôi muốn biết về [đình mỹ lương](loc_travel)
+- [đình mỹ lương](loc_travel) nằm ở đâu
+- thông tin về [khu du lịch cù lao thới sơn](loc_travel)
+- [khu du lịch cù lao thới sơn](loc_travel)
+- tôi muốn biết về [khu du lịch cù lao thới sơn](loc_travel)
+- [khu du lịch cù lao thới sơn](loc_travel) nằm ở đâu
+- thông tin về [đình long trung](loc_travel)
+- [đình long trung](loc_travel)
+- tôi muốn biết về [đình long trung](loc_travel)
+- [đình long trung](loc_travel) nằm ở đâu
+- thông tin về [đình điều hòa](loc_travel)
+- [đình điều hòa](loc_travel)
+- tôi muốn biết về [đình điều hòa](loc_travel)
+- [đình điều hòa](loc_travel) nằm ở đâu
+- thông tin về [vườn hoa mãn đình hồng](loc_travel)
+- [vườn hoa mãn đình hồng](loc_travel)
+- tôi muốn biết về [vườn hoa mãn đình hồng](loc_travel)
+- [vườn hoa mãn đình hồng](loc_travel) nằm ở đâu
+- thông tin về [chùa sắc tứ linh thứu](loc_travel)
+- [chùa sắc tứ linh thứu](loc_travel)
+- tôi muốn biết về [chùa sắc tứ linh thứu](loc_travel)
+- [chùa sắc tứ linh thứu](loc_travel) nằm ở đâu
+- thông tin về [làng tre](loc_travel)
+- [làng tre](loc_travel)
+- tôi muốn biết về [làng tre](loc_travel)
+- [làng tre](loc_travel) nằm ở đâu
+
+## intent:thankyou
+- um cảm ơn
+- thanks
+- thank you
+- cám ơn nhé
+- cám ơn nhiều
+- tuyệt vời, cám ơn
+- Cám ơn nhiều lắm
+- Cám ơn! thông tin rất bổ ích
+- cám ơn!
+- tuyệt! cám ơn
+- tuyệt cú mèo
+- tuyệt vời ông mặt trời luôn
+- quá tuyệt vời
+- thank you very much!
+- cám ơn nhé
+- cảm ơn
+- cám ơn nhé
+
+## intent:what_help
+- bạn có thể giúp gì cho tôi
+- bạn có thể giúp gì nào
+- bạn có thể làm gì?
+- cậu có thể làm gì?
+- các việc cậu có thể giúp tôi
+
+## regex:phone_num
+- ^(0)[0-9]{8}

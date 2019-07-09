@@ -1,0 +1,417 @@
+2019-06-27 22:24:33,695 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-27 22:24:33,798 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-27 22:28:18,242 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-27 22:31:03,759 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-27 22:42:11,172 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=3&transport=polling&t=MkPcUQo'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2019-06-27 22:42:43,997 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=3&transport=polling&t=MkPcWHq'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2019-06-27 22:42:44,000 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=3&transport=polling&t=MkPccOW'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2019-06-27 22:42:51,434 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=3&transport=polling&t=MkPceIj'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2019-06-27 22:43:31,191 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=3&transport=polling&t=MkPcg6w'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2019-06-27 22:43:31,192 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=3&transport=polling&t=MkPcmDb'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2019-06-27 22:43:43,180 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/socket.io/?EIO=3&transport=polling&t=MkPcpq4'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /socket.io/ not found
+2019-06-28 08:44:22,445 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-28 08:44:22,536 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-28 08:45:43,462 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-28 08:46:47,340 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-28 08:46:47,423 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-28 08:46:54,248 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-28 11:02:44,574 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-28 11:04:21,174 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-06-28 11:04:21,236 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 21:48:07,896 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-02 21:49:26,831 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-02 21:52:01,824 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 21:52:01,886 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 21:56:47,468 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 21:56:47,544 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 22:30:05,469 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 22:30:05,749 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 22:43:06,140 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 22:43:06,207 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 22:47:00,356 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 22:55:17,948 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-02 22:56:58,842 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-02 22:56:58,917 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-03 08:14:16,728 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-03 08:14:16,797 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-03 14:15:23,257 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/favicon.ico'
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2019-07-03 14:18:30,873 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-07 23:08:25,831 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-07 23:08:25,892 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-07 23:22:09,765 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\asyncio\base_events.py", line 466, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.
+2019-07-08 07:59:38,659 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 07:59:38,749 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 08:08:29,333 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 08:17:07,566 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 08:17:07,655 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 08:26:45,723 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 08:27:39,731 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 08:27:57,044 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 08:36:52,138 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 08:36:52,227 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 10:51:51,050 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 10:51:51,152 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:01:44,612 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 11:02:38,661 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 11:03:40,508 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:03:40,596 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:05:31,353 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:05:31,396 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:05:31,406 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:05:31,412 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:08:27,967 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 11:08:29,612 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 11:10:46,167 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:10:46,226 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:18:08,128 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 11:19:11,715 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:19:11,793 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:24:45,076 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 11:25:47,826 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:25:47,917 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:26:20,882 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-08 11:34:28,213 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:34:28,292 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-08 11:38:13,442 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-09 09:43:42,307 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-09 14:39:11,743 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-09 14:39:11,832 [ERROR]  Exception occurred while handling uri: unknown
+NoneType: None
+2019-07-09 14:41:15,107 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic\app.py", line 958, in handle_request
+    request, response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\spf\framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "d:\anaconda3\envs\rasa-py3.6\lib\site-packages\sanic_cors\core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'

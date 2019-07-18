@@ -497,5 +497,147 @@ class ActionDirectionTravel(Action):
 		
 		return []
 
+class HottelForm(FormAction):
+    """Example of a custom form action"""
 
+    def name(self) -> Text:
+        """Unique identifier of the form"""
 
+        return "hottel_form"
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        """A list of required slots that the form has to fill"""
+
+        return ["lc_hottel", "num_room", "qu_hottel"]
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        """A dictionary to map required slots to
+            - an extracted entity
+            - intent: value pairs
+            - a whole message
+            or a list of them, where a first match will be picked"""
+
+        return {
+            "lc_hottel": self.from_entity(entity="lc_hottel", intent="request_hottel"),
+            "num_room":  self.from_entity(entity="num_room"),                      
+            "qu_hottel": self.from_entity(entity="qu_hottel"),            
+            
+        }
+
+    # USED FOR DOCS: do not rename without updating in docs
+    @staticmethod
+    def lc_hottel_db() -> List[Text]:
+        """Database of supported lc_hottels"""
+
+        return [
+            "caribbean",
+            "chinese",
+            "french",
+            "greek",
+            "indian",
+            "italian",
+            "mexican",
+        ]
+
+    @staticmethod
+    def is_int(string: Text) -> bool:
+        """Check if a string is an integer"""
+
+        try:
+            int(string)
+            return True
+        except ValueError:
+            return False
+
+    # USED FOR DOCS: do not rename without updating in docs
+    # def validate_qu_hottel(
+    #     self,
+    #     value: Text,
+    #     dispatcher: CollectingDispatcher,
+    #     tracker: Tracker,
+    #     domain: Dict[Text, Any],
+    #     )-> Optional[Text]:
+    #     """Validate lc_hottel value."""
+    #     return("qu_hottel", value)
+
+    def validate_lc_hottel(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Optional[Text]:
+        """Validate lc_hottel value."""
+        if(self.from_entity(entity="lc_hottel")):
+            return{"lc_hottel": value}
+        return {"lc_hottel": None}
+        # else:
+        # if value.lower() in self.lc_hottel_db():
+        #     # validation succeeded, set the value of the "lc_hottel" slot to value
+        #     return {"lc_hottel": value}
+        # else:
+        #     dispatcher.utter_template("utter_wrong_lc_hottel", tracker)
+        #     # validation failed, set this slot to None, meaning the
+        #     # user will be asked for the slot again
+        #     return {"lc_hottel": None}
+
+    def validate_num_room(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> Optional[Text]:
+        """Validate num_room value."""
+        return {"num_room": value}
+        # if self.is_int(value) and int(value) > 0:
+        #     return {"num_room": value}
+        # else:
+        #     dispatcher.utter_template("utter_wrong_num_room", tracker)
+        #     # validation failed, set slot to None
+        #     return {"num_room": None}
+    
+   
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        """Define what the form has to do
+            after all required slots are filled"""
+
+        # utter submit template
+        
+        return []
+
+class ActionRestart(Action):
+    def name(self)-> Text:
+        return "action_restart"
+
+    def run(self,
+       dispatcher: CollectingDispatcher,
+       tracker: Tracker,
+       domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        return[Restarted()]
+
+class ActionCheckHottel(Action):
+    def name(self) -> Text:
+        return "action_search_hottel"
+
+    def run(self,
+       dispatcher: CollectingDispatcher,
+       tracker: Tracker,
+       domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        
+        lc_hottel = tracker.get_slot('lc_hottel')
+        sure = tracker.get_slot('sure')
+        if sure == "no":
+            return [Restarted()]
+        else:            
+            sqlht = 'select name from chatbot where stt=1 '
+            dispatcher.utter_template("utter_search_hottel", tracker, sqlht=sqlht)
+            return [Restarted()]

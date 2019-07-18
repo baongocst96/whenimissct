@@ -1,6 +1,8 @@
-## happy path direct help
+## hello
 * greet
     - utter_greet
+    
+## happy path direct help
 * direct_and_help
     - utter_ask_help
     - utter_after_ask_help
@@ -123,3 +125,22 @@
     - utter_confirm_after_edit_res
 * affirm
     - action_confirm_restaurant
+
+##search perfect
+* request_hottel
+    - hottel_form
+    - form{"name": "hottel_form"}
+    - form{"name": null}    
+    - utter_slots_values_ht
+    - action_restart
+* affirm    
+    - action_yes_sure
+    - action_search_hottel
+* deny 
+    - action_no_sure
+    - action_search_hottel    
+
+## thanksyou
+* thankyou
+    - utter_noworries
+    - action_restart

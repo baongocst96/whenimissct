@@ -8,11 +8,11 @@ pipeline:
     model: "model-final_old"
     case_sensitive: false
   - name: "SpacyTokenizer"
-  - name: "CountVectorsFeaturizer"
-  - name: "CRFEntityExtractor"
-  - name: "RegexFeaturizer"
-  - name: "EntitySynonymMapper"
+  - name: "CountVectorsFeaturizer"  #bag-of-word
   - name: "EmbeddingIntentClassifier"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
+  
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
@@ -20,6 +20,6 @@ policies:
   - name: FallbackPolicy
   - name: MemoizationPolicy
   - name: KerasPolicy
-    epochs: 300
   - name: MappingPolicy
   - name: FormPolicy
+

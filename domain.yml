@@ -1,93 +1,63 @@
-actions:
-  - utter_greet # Common utter
-  - utter_what_help
-  - utter_noworries
-  - utter_bye
-  - utter_ask_help # Request inform help
-  - utter_after_ask_help
-  - utter_inform_common_location_travel # Request inform common location travel
-  - utter_after_inform_common_location_travel
-  - utter_show_cho_hoa_mytho # Request detail location travel
-  - utter_more_inform_cho_hoa_mytho
-  - utter_detail_cho_hoa_mytho
-  - utter_after_direct_chmt
-  - utter_show_nha_co_caibe
-  - utter_more_inform_nha_co_caibe
-  - utter_detail_nha_co_caibe
-  - action_direction_place
-  - action_place_search # Search place (restaurant + hotel)
-  - utter_after_search_res1 # restaurant
-  - utter_after_search_res2
-  - utter_after_search_hotel1 # hotel
-  - utter_after_search_hotel2
-  - utter_confirm_res # Book restaurant
-  - utter_edit_inform_res
-  - utter_confirm_after_edit_res
-  - action_confirm_restaurant
-  - action_edit_book_res
-  - restart_form_edit_res
-  - utter_confirm_hotel # Book hotel
-  - utter_edit_inform_hotel
-  - action_confirm_hotel
-  - utter_show_event # Event
-entities:
-  - edit_inform_res
-  - loc_travel
-  - name_location
-  - num_dis
-  - num_people
-  - num_people_hotel
-  - num_people_res
-  - num_room
-  - phone_num
-  - price_hotel
-forms:
-  - form_edit_res
-  - hotel_form
-  - restaurant_form
 intents:
-  - thankyou
-  - book_restaurant
-  - edit_book
-  - affirm
-  - greet
-  - deny
-  - what_help
-  - direct_and_help
-  - request_event
-  - request_inform_common_location_travel
-  - request_inform_detail_location_travel
-  - find_location
-  - book_hotel
-  - what_can_help
-  - detail_cho_hoa_mytho
-  - direct_chmt
-  - detail_nha_co_caibe
-  - direct_nccb
-  - edit_form_res
-  - edit_res
-  - edit_form_hotel
-  - edit_num_hotel
-  - edit_num_room
-  - edit_phone_hotel
-  - edit_price_hotel
-  - edit_add_hotel
+- affirm
+- book_hotel
+- book_restaurant
+- deny
+- detail_cho_hoa_mytho
+- detail_nha_co_caibe
+- direct_and_help
+- direct_chmt
+- direct_nccb
+- edit_add_hotel
+- edit_book
+- edit_form_hotel
+- edit_form_res
+- edit_num_hotel
+- edit_num_room
+- edit_phone_hotel
+- edit_price_hotel
+- edit_res
+- find_location
+- greet
+- request_event
+- request_inform_common_location_travel
+- request_inform_detail_location_travel
+- thankyou
+- what_can_help
+- what_help
+- request_hottel:
+      use_entities: false
+entities:
+- edit_inform_res
+- loc_travel
+- name_location
+- num_dis
+- num_people
+- num_people_hotel
+- num_people_res
+- phone_num
+- price_hotel
+- lc_hottel
+- num_room
+- qu_hottel
 slots:
   add_request_hotel:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   add_request_res:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   edit_add_request_res:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
+  edit_inform_res:
+    type: text
   edit_num_people_res:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   edit_phone_res:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   loc_travel:
     type: text
   name_location:
@@ -95,35 +65,38 @@ slots:
   num_dis:
     type: unfeaturized
   num_people_hotel:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   num_people_res:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   num_room:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   phone_hotel:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   phone_res:
-    auto_fill: false
     type: unfeaturized
+    auto_fill: false
   price_hotel:
     type: categorical
     values:
-    - Dưới 400k
+    - dưới 400k
     - 400k - 1m
-    - Trên 1m
-  edit_inform_res:
-    type: text
+    - trên 1m
   requested_slot:
     type: unfeaturized
+  lc_hottel:
+    type: unfeaturized
+    auto_fill: false  
+  qu_hottel:
+    type: unfeaturized
+    auto_fill: false
+
 templates:
-  # Common utter
   utter_greet:
-  - text: "Xin chào! Tôi là trợ lí ảo du lịch TG\n
-          \nTôi có thể giúp gì cho bạn!"
+  - text: "Xin chào! Tôi là trợ lí ảo du lịch TG\n \nTôi có thể giúp gì cho bạn!"
     buttons:
     - title: 🍝 Tìm nhà hàng
       payload: /find_location{"name_location":"nhà hàng"}
@@ -150,14 +123,9 @@ templates:
   utter_bye:
   - text: Nói chuyện sau nhé! 😉
   utter_default:
-  - text: "Bot không hiểu! thử câu khác nhá :)"
-
-
-  # Request inform help
+  - text: Bot không hiểu! thử câu khác nhá :)
   utter_ask_help:
-  - text: "Thông tin trợ giúp:\n
-          \n☎ Hotline: 012345678\n
-          \n🏠 Địa chỉ: ..."
+  - text: "Thông tin trợ giúp:\n \n☎ Hotline: 012345678\n \n\U0001F3E0 Địa chỉ: ..."
   utter_after_ask_help:
   - text: Bạn có muốn bot giúp gì nữa không?
     buttons:
@@ -171,15 +139,10 @@ templates:
       payload: /request_event
     - title: 🗺 Địa điểm du lịch
       payload: /request_inform_common_location_travel
-
-    
-  # Request inform common location travel
   utter_inform_common_location_travel:
-  - text: "Tại đây có nhiều địa điểm du lịch hấp dẫn như:\n
-          \n💐 Chợ hoa Mỹ Tho\n
-          \n🏟 Nhà cổ Cái Bè\n
-          \n🏛 Di tích Chiến thắng Cổ Cò\n
-          \n     ..."
+  - text: "Tại đây có nhiều địa điểm du lịch hấp dẫn như:\n \n\U0001F490 Chợ hoa Mỹ\
+      \ Tho\n \n\U0001F3DF Nhà cổ Cái Bè\n \n\U0001F3DB Di tích Chiến thắng Cổ Cò\n\
+      \ \n     ..."
     elements:
       title: ➕ Xem thêm
       buttons:
@@ -196,27 +159,20 @@ templates:
       payload: /request_inform_detail_location_travel{"loc_travel":"nhà cổ cái bè"}
     - title: 🤔 Bạn có thể làm gì?
       payload: /what_can_help
-
-
-  # Request detail location travel
-  # Chợ hoa mỹ tho
   utter_show_cho_hoa_mytho:
-  - text: "💐 Chợ hoa Mỹ Tho"
+  - text: 💐 Chợ hoa Mỹ Tho
     image: ./images/locations_travel/cho_hoa_my_tho.jpg
   utter_more_inform_cho_hoa_mytho:
-  - text: "💴 Giá: Miễn phí\n
-          \n☎ SDT: ...\n
-          \n✉️ Email: ...\n
-          \n🕖 Mở cửa: 7:00 SA\n
-          \n🕕 Đóng cửa: 6:00 CH\n
-          \n🏠 Địa chỉ: P1, Mỹ Tho, TG"
+  - text: "\U0001F4B4 Giá: Miễn phí\n \n☎ SDT: ...\n \n✉️ Email: ...\n \n\U0001F556\
+      \ Mở cửa: 7:00 SA\n \n\U0001F555 Đóng cửa: 6:00 CH\n \n\U0001F3E0 Địa chỉ: P1,\
+      \ Mỹ Tho, TG"
     buttons:
     - title: 🚸 Chỉ đường
       payload: /direct_chmt{"loc_travel":"chợ hoa mỹ tho"}
     - title: 👓 More detail
-      payload: /detail_cho_hoa_mytho     
+      payload: /detail_cho_hoa_mytho
   utter_detail_cho_hoa_mytho:
-  - text: "Bạn có thể xem thông tin chi tiết tại:"
+  - text: 'Bạn có thể xem thông tin chi tiết tại:'
     elements:
       title: Chợ hoa Mỹ Tho
       buttons:
@@ -225,40 +181,31 @@ templates:
   utter_after_direct_chmt:
   - text: Bạn cần gì nữa hk...
     buttons:
-    - title: "😘 No"
+    - title: 😘 No
       payload: /thankyou
-    - title: "🏟 Nhà cổ Cái Bè"
+    - title: 🏟 Nhà cổ Cái Bè
       payload: /request_inform_detail_location_travel{"loc_travel":"nhà cổ cái bè"}
-    - title: "🤔 Bạn có thể làm gì?"
+    - title: 🤔 Bạn có thể làm gì?
       payload: /what_can_help
-
-  # Nhà cổ cái bè
   utter_show_nha_co_caibe:
-  - text: "🏟 Nhà cổ Cái Bè"
+  - text: 🏟 Nhà cổ Cái Bè
     image: ./images/locations_travel/nha_co_cai_be.jpg
   utter_more_inform_nha_co_caibe:
-  - text: "💴 Giá: Miễn phí\n
-          \n☎ SDT: ...\n
-          \n✉️ Email: ...\n
-          \n🕖 Mở cửa: 7:00 SA\n
-          \n🕕 Đóng cửa: 6:00 CH\n
-          \n🏠 Địa chỉ: ĐHH, Cái Bè, TG"
+  - text: "\U0001F4B4 Giá: Miễn phí\n \n☎ SDT: ...\n \n✉️ Email: ...\n \n\U0001F556\
+      \ Mở cửa: 7:00 SA\n \n\U0001F555 Đóng cửa: 6:00 CH\n \n\U0001F3E0 Địa chỉ: ĐHH,\
+      \ Cái Bè, TG"
     buttons:
     - title: 🚸 Chỉ đường
       payload: /direct_nccb
     - title: 👓 More detail
       payload: /detail_nha_co_caibe
   utter_detail_nha_co_caibe:
-  - text: "Bạn có thể xem thông tin chi tiết tại:"
+  - text: 'Bạn có thể xem thông tin chi tiết tại:'
     elements:
       title: Nhà cổ Cái Bè
       buttons:
         title: 👇 Click me!
         url: https://mytiengiang.vn/vi/nhacocaibe
-
-
-  # Search place (restaurant + hotel)
-  # restaurant
   utter_after_search_res1:
   - text: Bạn muốn bot giúp gì nữa không nhỉ?
     buttons:
@@ -283,8 +230,6 @@ templates:
       payload: /find_location{"name_location":"khách sạn"}
     - title: 🗺 Địa điểm du lịch
       payload: /request_inform_common_location_travel
-
-  # hotel
   utter_after_search_hotel1:
   - text: Bạn còn muốn Bot giúp gì nữa hk nè?
     buttons:
@@ -293,89 +238,72 @@ templates:
     - title: 🔭 Tìm khách sạn trong 2km
       payload: /find_location{"name_location":"khách sạn", "num_dis":"2000"}
     - title: 🔭 Tìm khách sạn trong 5km
-      payload: /find_location{"name_location":"khách sạn", "num_dis":"5000"}   
+      payload: /find_location{"name_location":"khách sạn", "num_dis":"5000"}
     - title: 🏨 Tìm nhà hàng
       payload: /find_location{"name_location":"nhà hàng"}
     - title: 🗺 Địa điểm du lịch
-      payload: /request_inform_common_location_travel 
+      payload: /request_inform_common_location_travel
   utter_after_search_hotel2:
   - text: Bạn còn muốn Bot giúp gì nữa hk nè?
     buttons:
-    - title: "😘 No"
+    - title: 😘 No
       payload: /thankyou
-    - title: "🔭 Tìm khách sạn trong 5km"
+    - title: 🔭 Tìm khách sạn trong 5km
       payload: /find_location{"name_location":"khách sạn", "num_dis":"5000"}
-    - title: "🏨 Tìm nhà hàng"
+    - title: 🏨 Tìm nhà hàng
       payload: /find_location{"name_location":"nhà hàng"}
-    - title: "🗺 Địa điểm du lịch"
+    - title: 🗺 Địa điểm du lịch
       payload: /request_inform_common_location_travel
-
-
-  # Book restaurant
-  # book
   utter_ask_num_people_res:
   - text: Bạn muốn đặt bàn cho mấy người vậy?
   utter_wrong_num_people_res:
-  - text: "Oop!!!🥴 Hãy nhập số người bằng số\n
-          \nEx: 1 người, 4 người, ..."
+  - text: "Oop!!!\U0001F974 Hãy nhập số người bằng số\n \nEx: 1 người, 4 người, ..."
   utter_ask_add_request_res:
   - text: Bạn có yêu cầu gì thêm không nhỉ?
   utter_ask_phone_res:
   - text: Cho bot xin sđt của bạn để hoàn thành đặt bàn nhé!
   utter_wrong_phone:
-  - text: "Oop!!!🥴 Hãy nhập sđt theo định dạng sau:\n
-          \nEx: 012345678"
+  - text: "Oop!!!\U0001F974 Hãy nhập sđt theo định dạng sau:\n \nEx: 012345678"
   utter_confirm_res:
-  - text: "Bot chuẩn bị đặt bàn cho bạn theo các thông số sau:\n
-          \n👫 Số người: {num_people_res}\n
-          \n☎ SĐT đặt bàn: {phone_res}\n
-          \n📖 Yêu cầu thêm: {add_request_res}"
+  - text: "Bot chuẩn bị đặt bàn cho bạn theo các thông số sau:\n \n\U0001F46B Số người:\
+      \ {num_people_res}\n \n☎ SĐT đặt bàn: {phone_res}\n \n\U0001F4D6 Yêu cầu thêm:\
+      \ {add_request_res}"
     buttons:
     - title: 👌 Oke
       payload: /affirm
     - title: ↺ Tôi muốn sửa thông tin
       payload: /edit_form_res
-      
-  # edit
   utter_edit_inform_res:
   - text: Bạn muốn sửa thông tin nào vậy?
     buttons:
-    - title: "👫 Số người"
+    - title: 👫 Số người
       payload: /edit_res{"edit_inform_res":"số người"}
-    - title: "☎ Số điện thoại"
+    - title: ☎ Số điện thoại
       payload: /edit_res{"edit_inform_res":"sdt"}
-    - title: "📖 Yêu cầu"
+    - title: 📖 Yêu cầu
       payload: /edit_res{"edit_inform_res":"y/c"}
   utter_ask_edit_num_people_res:
-  - text: "Bạn muốn thay đổi từ \"{num_people_res}\" người thành bao nhiêu người?"
+  - text: Bạn muốn thay đổi từ "{num_people_res}" người thành bao nhiêu người?
   utter_ask_edit_phone_res:
-  - text: "Bạn muốn thay đổi sdt \"{phone_res}\" thành?"
+  - text: Bạn muốn thay đổi sdt "{phone_res}" thành?
   utter_ask_edit_add_request_res:
-  - text: "Bạn muốn thay đổi yêu cầu \"{add_request_res}\" thành?"
+  - text: Bạn muốn thay đổi yêu cầu "{add_request_res}" thành?
   utter_confirm_after_edit_res:
-  - text: "Thông tin sau khi thay đổi của bạn như sau:\n
-          \n👫 Số người: {num_people_res}\n
-          \n☎ SĐT đặt bàn: {phone_res}\n
-          \n📖 Yêu cầu thêm: {add_request_res}"
+  - text: "Thông tin sau khi thay đổi của bạn như sau:\n \n\U0001F46B Số người: {num_people_res}\n\
+      \ \n☎ SĐT đặt bàn: {phone_res}\n \n\U0001F4D6 Yêu cầu thêm: {add_request_res}"
     buttons:
     - title: 👌 Oke
       payload: /affirm
     - title: ↺ Tôi muốn sửa thông tin
       payload: /edit_form_res
-      
-    
-  # Book hotel
-  # book
   utter_ask_num_people_hotel:
   - text: Bạn muốn đặt phòng cho mấy người vậy?
   utter_wrong_num_people_hotel:
-  - text: "Oop!!!🥴 Hãy nhập số người bằng số\n
-          \nEx: 1 người, 4 người, ..."
+  - text: "Oop!!!\U0001F974 Hãy nhập số người bằng số\n \nEx: 1 người, 4 người, ..."
   utter_ask_num_room:
   - text: Bạn muốn đặt mấy phòng vậy?
   utter_wrong_num_room:
-  - text: "Oop!!!🥴 Hãy nhập số phòng bằng số\n
-          \nEx: 1 phòng, 4 phòng, ..."
+  - text: "Oop!!!\U0001F974 Hãy nhập số phòng bằng số\n \nEx: 1 phòng, 4 phòng, ..."
   utter_ask_price_hotel:
   - buttons:
     - payload: /book_hotel{"price_hotel":"Dưới 400k"}
@@ -390,38 +318,79 @@ templates:
   utter_ask_phone_hotel:
   - text: Cho bot xin sđt của bạn để hoàn thành đặt phòng nhé!
   utter_confirm_hotel:
-  - text: "Bot chuẩn bị đặt phòng cho bạn theo các thông số sau:\n
-          \n👫 Số người: {num_people_hotel}\n
-          \n🔢 Số phòng: {num_room}\n
-          \n☎ SĐT đặt phòng: {phone_hotel}\n
-          \n💴 Giá: {price_hotel}\n
-          \n📖 Yêu cầu thêm: {add_request_hotel}"
+  - text: "Bot chuẩn bị đặt phòng cho bạn theo các thông số sau:\n \n\U0001F46B Số\
+      \ người: {num_people_hotel}\n \n\U0001F522 Số phòng: {num_room}\n \n☎ SĐT đặt\
+      \ phòng: {phone_hotel}\n \n\U0001F4B4 Giá: {price_hotel}\n \n\U0001F4D6 Yêu\
+      \ cầu thêm: {add_request_hotel}"
     buttons:
     - title: 👌 Oke
       payload: /affirm
     - title: ↺ Tôi muốn sửa thông tin
       payload: /edit_form_hotel
-  
-  # edit
   utter_edit_inform_hotel:
   - text: Bạn muốn sửa thông tin nào vậy?
     buttons:
     - title: 👫 Số người
-      payload: /edit_num_hotel 
+      payload: /edit_num_hotel
     - title: 🔢 Số phòng
-      payload: /edit_num_room 
+      payload: /edit_num_room
     - title: ☎ Số điện thoại
       payload: /edit_phone_hotel
     - title: 💴 Giá
-      payload: /edit_price_hotel 
+      payload: /edit_price_hotel
     - title: 📖 Yêu cầu
       payload: /edit_add_hotel
-
-
-  # Event
   utter_show_event:
-  - text: "Event\n
-          \n🎃\n
-          \n🎄\n
-          \n✨\n
-          \n🎎"
+  - text: "Event\n \n\U0001F383\n \n\U0001F384\n \n✨\n \n\U0001F38E"
+  utter_ask_lc_hottel:
+  - text: "Bạn cần KS ở khu vực nào ?"
+  utter_ask_qu_hottel:
+  - text: "Bạn cần một khách sạn như thế nào? /n (giá rẻ, tốt, thoáng mát, chất lượng....)"
+  utter_slots_values_ht:
+  - text: "Có phải bạn đang tìm một khách sạn {qu_hottel} gồm {num_room} phòng ở {lc_hottel} ?"  
+  utter_wrong_lc_hottel:
+  - text: "không tìm thấy khách sạn ở vị trí này, mời nhập lại!"
+  utter_search_hottel:
+    - text: "{sqlht}"
+
+actions:
+- action_confirm_hotel
+- action_confirm_restaurant
+- action_direction_place
+- action_edit_book_res
+- action_place_search
+- action_restart
+- restart_form_edit_res
+- utter_after_ask_help
+- utter_after_direct_chmt
+- utter_after_inform_common_location_travel
+- utter_after_search_hotel1
+- utter_after_search_hotel2
+- utter_after_search_res1
+- utter_after_search_res2
+- utter_ask_help
+- utter_bye
+- utter_confirm_after_edit_res
+- utter_confirm_hotel
+- utter_confirm_res
+- utter_detail_cho_hoa_mytho
+- utter_detail_nha_co_caibe
+- utter_edit_inform_hotel
+- utter_edit_inform_res
+- utter_greet
+- utter_inform_common_location_travel
+- utter_more_inform_cho_hoa_mytho
+- utter_more_inform_nha_co_caibe
+- utter_noworries
+- utter_show_cho_hoa_mytho
+- utter_show_event
+- utter_show_nha_co_caibe
+- utter_what_help
+- utter_slots_values_ht
+- utter_search_hottel
+
+forms:
+- form_edit_res
+- hotel_form
+- restaurant_form
+- hottel_form

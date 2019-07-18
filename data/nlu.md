@@ -29,20 +29,6 @@
 - có nha
 - ukm đúng rồi
 
-## intent:book_hotel
-- tôi muốn đặt khách sạn cho [4](num_people_hotel) người
-- tôi muốn đặt khách sạn cho [2](num_people_hotel) người với [2](num_room) phòng
-- đặt khách sạn cho [3](num_people_hotel) người
-- tìm khách sạn còn phòng cho [2](num_people_hotel) người
-- cho [3](num_people_hotel) người
-- [1](num_people_hotel) người
-- [5](num_people_hotel) người
-- [2](num_room) phòng
-- [6](num_room) phòng
-- [3](num_room) phòng
-- [4](num_room) phòng
-- đặt khách sạn cho [2](num_people_hotel) người và [2](num_room) phòng
-
 ## intent:book_restaurant
 - đặt nhà hàng
 - đặt bàn nhà hàng
@@ -277,8 +263,6 @@
 - quá tuyệt vời
 - thank you very much!
 - cám ơn nhé
-- cảm ơn
-- cám ơn nhé
 
 ## intent:what_help
 - bạn có thể giúp gì cho tôi
@@ -289,3 +273,46 @@
 
 ## regex:phone_num
 - ^(0)[0-9]{8}
+
+## intent:request_hottel
+- đặt khách sạn
+- khách sạn quanh đây
+- khách sạn giá tốt
+- khách sạn
+- phòng
+- đặt phòng
+- muốn nghỉ ngơi
+- tôi muốn tìm một khách sạn
+- tôi muốn tìm khách sạn
+- tôi muốn tìm chỗ nghỉ ngơi
+- tìm chổ nghỉ
+- tôi cần đặt phòng khách sạn
+- khách sạn [quanh đây](lc_hottel)
+- khách sạn [giá tốt](qu_hottel)
+- muốn nghỉ ngơi
+- khách sạn [giá rẻ](qu_hottel)
+- khách sạn [5 sao](qu_hottel)
+- các khách sạn [chất lượng](qu_hottel) ở đây
+- tìm các khách sạn [phổ biến](qu_hottel) ở [cần thơ](lc_hottel)
+- tôi muốn tìm một khách sạn [thoáng mát](qu_hottel), [tiện nghi](qu_hottel)
+- cần tìm các khách sạn ở [quận ninh kiều](lc_hottel)
+- khách sạn ở [quận cái răng](lc_hottel)
+- khách sạn ở [quận phú nhuận](lc_hottel)
+- khách sạn ở [phường hưng lợi quận ninh kiều](lc_hottel)
+- khách sạng ở [phường an khánh quận ninh kiều](lc_hottel)
+- tôi cần một khách sạn gần [trường đại học cần thơ](lc_hottel)
+- tìm giúp tôi một khách sạn gần [cầu đầu sấu](lc_hottel)
+- khách sạn gần [cầu cái răng](lc_hottel)
+- khách sạn gần [cầu nhị kiều](lc_hottel)
+- tìm khách sạn [ở ngoại ô thành phố](lc_hottel)
+- tìm khách sạn [tốt](qu_hottel) ở [trung tâm thành phố](lc_hottel)
+- tìm một khách sạn chất lượng [tốt](qu_hottel) và ở gần [trung tâm](lc_hottel)
+- tôi muốn đặt phòng cho [2](num_room) người
+- tìm khách sạn [4](num_room) phòng
+- tôi muốn tìm khách sạn
+- tìm khách sạn ở [quận ninh kiều](lc_hottel:quận ninh_kiều)
+- khách sạn [4](num_room) phòng
+- khách sạn [giá rẻ](qu_hottel)
+- khách sạn [giá tốt](qu_hottel)
+- tìm khách sạn ở [quận cái răng](lc_hottel)
+- khách sạn [5 sao](qu_hottel)
